@@ -1,6 +1,0 @@
-<config>
-    <phpExe>C:\xampp\php\php.exe</phpExe>
-    <logicPath>logic</logicPath>
-    <instancePath>instance</instancePath>
-    <casesPath>cases</casesPath>
-</config>
