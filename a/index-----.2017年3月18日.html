@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网站主页</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+
+    <script type="text/javascript" src="js/jquery1.42.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script> -->
+    <script type="text/javascript" src="js/jquery.KinSlideshow-1.2.1.min.js"></script>
+
+
+
+
+</head>
+<body>
+<!-- 顶部导航开始 -->
+<div class="wg header">
+	<div class="welcome">欢迎访问xxx官网！</div>
+	<div class="datetime">今天是:2017年3月15日  <a href="#">收藏本站</a></div>
+</div>	
+	<div class="clear"></div>
+<!-- 顶部导航结束 -->
+
+<!-- 条幅开始 -->
+<div class="banner">
+	<div class="wg" id="bannerinfo">
+		<!-- 	<div class="bd">
+				<ul>
+					<li><a href="#" target="_blank"><img src="img/banner_1.jpg" /></a></li>
+					<li><a href="#" target="_blank"><img src="img/banner_1.jpg" /></a></li>
+					<li><a href="#" target="_blank"><img src="img/banner_1.jpg" /></a></li>
+				</ul>
+			</div>
+	<script type="text/javascript">jQuery(".banner").slide({mainCell:".bd ul",effect:"top",delayTime:1000,autoPlay:true,mouseOverStop:false});</script> -->
+			<a href="#" target="_blank"><img src="img/banner_1.jpg" width="1000" height="220" /></a>
+			<a href="#" target="_blank"><img src="img/banner_1.jpg" width="1000" height="220" /></a>
+			<a href="#" target="_blank"><img src="img/banner_1.jpg" width="1000" height="220" /></a>
+
+<script type="text/javascript">
+		 $(function(){
+  		      $("#bannerinfo").KinSlideshow({
+  		      	isHasTitleBar:false,    
+  		      	isHasTitleFont:false, 
+  		      	isHasBtn:false, 
+  		      	moveStyle:"up", 
+  		      	intervalTime:3, 
+  		      });
+  		  })
+	</script>
+	</div>	
+</div>
+<!-- 条幅结束 -->
+
+<!-- 导航条开始 -->
+<!-- <div class="nav">
+	
+	<div class="wg">
+		<ul>
+			<li><a href="#">网站主页</a></li>
+			<li><a href="#">网站主页</a></li>
+			<li><a href="#">网站主页</a></li>
+			<li><a href="#">网站主页</a></li>
+			<li><a href="#">网站主页</a></li>
+			<li><a href="#">网站主页</a></li>
+			<li><a href="#">网站主页</a></li>
+			<li><a href="#">网站主页</a></li>
+		</ul>
+	</div>
+
+</div> -->
+
+<!-- 导航条结束 -->
+<!-- 导航条开始 -->
+<div class="nav">
+	
+	<div class="wg">
+	<div class="navbodya ">
+
+<ul>
+			<li><a href="#">网站主页</a></li>
+			<li><a href="javascript:void();">关于我们</a>
+	       		  <ul>
+	       		     	 <li><a href="#">公司简介</a></li>
+				<li><a href="#">组织机构</a></li>
+				<li><a href="#">发展历程</a></li>
+				<li><a href="#">未来规划</a></li>
+				<li><a href="#">人才招聘</a></li> 
+				<li><a href="#">联系我们</a></li> 
+	       		     
+	       		  </ul>
+			</li>
+
+			<li><a href="javascript:void();">新闻动态</a>
+	       		  <ul>
+	       		     	 <li><a href="#">公司新闻</a></li>
+				<li><a href="#">行业新闻</a></li>
+				<li><a href="#">其他新闻</a></li>
+	       		     
+	       		  </ul>
+			</li>
+
+			<li><a href="javascript:void();">工程案例</a>
+	       		  <ul>
+	       		     	 <li><a href="#">电力安装</a></li>
+				<li><a href="#">政府机关</a></li>
+				<li><a href="#">军工企业</a></li>
+				<li><a href="#">工业企业</a></li>
+				<li><a href="#">房地产配电</a></li>
+	       		     
+	       		  </ul>
+			</li>
+			<li><a href="javascript:void();">企业文化</a>
+	       		  <ul>
+	       		     	 <li><a href="#">公司理念</a></li>
+				<li><a href="#">荣誉资质</a></li>
+				<li><a href="#">员工风采</a></li>
+				<li><a href="#">学习园地</a></li>
+				<li><a href="javascript:void();">六化管理</a>
+					<ul>
+						<li><a href="#">六化管理子类</a></li>
+						<li><a href="#">六化管理子类</a></li>
+						<li><a href="#">六化管理子类</a></li>
+						<li><a href="#">六化管理子类</a></li>
+						<li><a href="#">六化管理子类</a></li>
+					</ul>
+				</li>
+	       		     
+	       		  </ul>
+			</li>
+
+			<li><a href="javascript:void();">技术支持</a>
+	       		  <ul>
+	       		     	<li><a href="javascript:void();">建筑施工</a>
+					<ul>
+						<li><a href="#">施工项目</a></li>
+						<li><a href="#">施工文档</a></li>
+					</ul>
+	       		     	</li>
+				<li><a href="javascript:void();">电力安装</a>
+					<ul>
+						<li><a href="#">施工项目</a></li>
+						<li><a href="#">施工文档</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:void();">路灯照明</a>
+					<ul>
+						<li><a href="#">施工项目</a></li>
+						<li><a href="#">施工文档</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:void();">市政绿化</a>
+					<ul>
+						<li><a href="#">施工项目</a></li>
+						<li><a href="#">施工文档</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:void();">光伏发电</a>
+					<ul>
+						<li><a href="#">相关案例</a></li>
+						<li><a href="#">优惠政策</a></li>
+					</ul>
+				</li>
+	       		     
+	       		  </ul>
+			</li>
+
+			
+			</ul>
+		</div>
+		<div class="search">
+			<form action="">
+				<input type="text"  name="sear" placeholder="请输入要查询的内容">
+				<input type="submit" value="搜索">
+			</form>
+		</div>
+	</div>
+
+</div>
+<div class="clear"></div>
+<!-- 导航条结束 -->
+
+<!-- 图文头条类开始-->
+<div class="wg">
+	<div class="news_a">
+		<div class="img_news" id="img_news"  style="visibility:hidden;">
+		<a href="#" target="_blank"><img src="img/news.jpg" alt="这里是新闻公司简介分1"    width="350" height="240"/></a> 
+		<a href="#" target="_blank"><img src="img/news2.jpg" alt="这里是新闻组织机构分2"  width="350" height="240" /></a> 
+		<a href="#" target="_blank"><img src="img/news3.jpg" alt="这里是新闻发展历程分e"  width="350" height="240" /></a>	
+		<a href="#" target="_blank"><img src="img/news.jpg" alt="这里是新闻公司简介分1"    width="350" height="240"/></a> 
+		<a href="#" target="_blank"><img src="img/news2.jpg" alt="这里是新闻组织机构分2"  width="350" height="240" /></a> 
+		<a href="#" target="_blank"><img src="img/news3.jpg" alt="这里是新闻发展历程分e"  width="350" height="240" /></a>
+		</div>
+		<script type="text/javascript">
+			 $(function(){
+  			      $("#img_news").KinSlideshow({
+  			      	titleFont:{
+  			      		TitleFont_size:15,
+  			      		TitleFont_color:"#FFFFFF",
+  			      		TitleFont_family:"宋体",
+  			      		TitleFont_weight:"100"
+  			      	},
+  			      	isHasTitleBar:true,        //是否显示标题背景 可选值：【 true | false 】[默认为true]
+				titleBar:{
+					titleBar_height:20,
+					titleBar_bgColor:"#000000",
+					titleBar_alpha:0.5
+				},
+  			      	isHasBtn:true, //是否显示按钮
+				btn:{
+					btn_bgColor:"#065D61",btn_bgHoverColor:"#FD0303", btn_fontColor:"#CCCCCC",
+					btn_fontHoverColor:"#fff",btn_fontFamily:"Verdana", btn_borderColor:"#fff",
+					btn_borderHoverColor:"#fff", btn_borderWidth:1,btn_bgAlpha:0.7}
+  			      });
+  			  })
+		</script>
+	</div>
+</div>
+<!-- 图文头条类结束-->
+
+
+
+
+
+
+
+
+</body>
+</html>

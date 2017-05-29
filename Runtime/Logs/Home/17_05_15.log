@@ -1,0 +1,6 @@
+[ 2017-05-15T18:23:00+08:00 ] 127.0.0.1 /admin.php?m=Home&c=Buy&a=buyclass
+ERR: 模板不存在:./Admin/Home/View/Buy/buyclass.html
+
+[ 2017-05-15T18:26:03+08:00 ] 127.0.0.1 /admin.php?m=Home&c=Buy&a=buyclass
+ERR: 模板不存在:./Admin/Home/View/Buy/buyclass.html
+

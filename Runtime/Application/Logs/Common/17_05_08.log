@@ -1,0 +1,9 @@
+[ 2017-05-08T11:04:58+08:00 ] 127.0.0.1 /index.php/index/bue
+ERR: 无法加载模块:Index
+
+[ 2017-05-08T11:05:00+08:00 ] 127.0.0.1 /index.php/index/buy
+ERR: 无法加载模块:Index
+
+[ 2017-05-08T11:05:05+08:00 ] 127.0.0.1 /index.php/index/buy
+ERR: 无法加载模块:Index
+

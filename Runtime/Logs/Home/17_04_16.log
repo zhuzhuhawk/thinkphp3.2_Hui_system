@@ -1,0 +1,11 @@
+[ 2017-04-16T20:23:49+08:00 ] 127.0.0.1 /admin.php?m=Home&c=Dept&a=dept_add
+ERR: 1583:Incorrect parameters in the call to native function 'concat'
+ [ SQL语句 ] : SELECT *,concat(path',',id) as paths FROM `dept_type` ORDER BY paths 
+
+[ 2017-04-16T20:36:12+08:00 ] 127.0.0.1 /admin.php?m=Home&c=Dept&a=dept_add_save
+ERR: Think\Model:filed方法不存在！
+
+[ 2017-04-16T21:54:13+08:00 ] 127.0.0.1 /admin.php?m=Home&c=Dept&a=dept_add_save
+ERR: 1048:Column 'path' cannot be null
+ [ SQL语句 ] : INSERT INTO `dept_type` (`name`,`pid`,`path`,`level`) VALUES ('测试部门','0',NULL,'0')
+
