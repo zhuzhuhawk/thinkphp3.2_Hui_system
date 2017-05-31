@@ -2,3 +2,18 @@
 ERR: 1146:Table 'jianjin_manage.buy_come_from' doesn't exist
  [ SQL语句 ] : SHOW COLUMNS FROM `buy_come_from`
 
+[ 2017-05-31T21:36:57+08:00 ] 127.0.0.1 /admin.php?m=Home&c=Buy&a=buycomefrom_del
+ERR: 非法操作:buycomefrom_del
+
+[ 2017-05-31T21:38:08+08:00 ] 127.0.0.1 /admin.php?m=Home&c=Buy&a=buycomefrom_del
+ERR: 非法操作:buycomefrom_del
+
+[ 2017-05-31T21:38:10+08:00 ] 127.0.0.1 /admin.php?m=Home&c=Buy&a=buycomefrom_del
+ERR: 非法操作:buycomefrom_del
+
+[ 2017-05-31T21:38:51+08:00 ] 127.0.0.1 /admin.php?m=Home&c=Buy&a=buycomefrom_del
+ERR: 非法操作:buycomefrom_del
+
+[ 2017-05-31T21:41:58+08:00 ] 127.0.0.1 /admin.php?m=Home&c=Buy&a=buycomefromDel?delid=1
+ERR: 非法操作:buycomefromDel?delid=1
+

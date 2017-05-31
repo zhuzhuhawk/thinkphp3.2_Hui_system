@@ -39,6 +39,13 @@ class BuyController extends Controller {
 
 		$this->display();
 	}
+	public function buycomefromDel(){
+		echo "aaa";
+		$data['delid']= $_GET['delid'];
+		p($data);
+		// p($countList);
+
+	}
 
 
 
