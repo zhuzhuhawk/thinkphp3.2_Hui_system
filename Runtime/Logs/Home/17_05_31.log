@@ -1,0 +1,4 @@
+[ 2017-05-31T21:07:37+08:00 ] 127.0.0.1 /admin.php?m=Home&c=Buy&a=comefrom
+ERR: 1146:Table 'jianjin_manage.buy_come_from' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `buy_come_from`
+
