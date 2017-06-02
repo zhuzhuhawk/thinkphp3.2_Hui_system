@@ -7,8 +7,9 @@ class BuyController extends Controller {
 
 		 $m = M('buybak');
 		$data = $m->select();
+		$count = $m->count();
 		$this->assign('data',$data);
-
+		$this->assign('countlist',$count);
 		$this->display();
 	}
 
@@ -44,10 +45,7 @@ class BuyController extends Controller {
 		$data['delid']= $_GET['delid'];
 		p($data);
 		// p($countList);
-
 	}
-
-
 
 
 	// 添加采购记录
