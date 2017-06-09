@@ -1,16 +1,19 @@
 <?php 
-
+// 
+// 	设计数据库的时候，一定更要注意啊！
+// 	不要用任何驼峰法！！！妈的，会出问题啊！
+// 	最好用纯小写啊！
+// 	===============================
+// 	
+// 	规则： 纯小写字母+下划线+（纯小写字母/数字）
+// 	例如： ken_buyinfo_main_201706
+// 	
+// 	===============================
+// 
+// 
 namespace Home\Controller;
 use Think\Controller;
 class BuyController extends Controller{
-	/**
-	 * 购买信息主页
-	 * ================
-	 * @AuthorHTL
-	 * @DateTime  2017-03-07T10:26:46+0800
-	 * ================
-	 * @return    [type]                   [description]
-	 */
 	/**
 	 * [header description]
 	 * ================
@@ -47,15 +50,10 @@ class BuyController extends Controller{
 		
 		// p(buyids());
 		$this->display(); // 输出模板
-
-
 		// print_r("SESSION是：". $_SESSION['var']);
-
-
-
-
-
 	}
+
+
 	/**
 	 * 增加购买记录
 	 * ================
@@ -97,11 +95,7 @@ class BuyController extends Controller{
 		
 	//	p($data);
 	//	die;
-
-		
-		
-		
-		
+	
 		
 	}
 
@@ -169,7 +163,75 @@ class BuyController extends Controller{
 	}
 
 
+	/**
+	 * [ReceiveList description]
+	 * @ReceiveList  | 电脑领取管理		领取信息登记在这里
+	 * 	           	| 调用buyinfo表		字段名称以 Receive开头的	
+	 * ================
+	 * @AuthorHTL
+	 * @DateTime  2017-06-07T20:25:46+0800
+	 * ================
+	 */
+	public function ReceiveList(){
 
 
+
+		$Buyinfo = M('buyinfo'); // 实例化Buyinfo对象
+		// 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
+		$data = $Buyinfo->order('bdate desc')->page($_GET['p'].',15')->select();
+		$this->assign('data',$data);// 赋值数据集
+		$count = $Buyinfo->count();// 查询满足要求的总记录数
+		$Page = new \Think\Page($count,15);// 实例化分页类 传入总记录数和每页显示的记录数
+		$Page->setConfig('prev', '上一页');
+	 	$Page->setConfig('next', '下一页');
+	 	$Page->setConfig('last', '末页');
+	 	$Page->setConfig('first', '首页');
+		$Page->setConfig("theme" ,"共%TOTAL_ROW%条数据  %UP_PAGE% %LINK_PAGE% %DOWN_PAGE%  ");
+		// $Page->setConfig("theme" ,"共%TOTAL_ROW%个数据 %FIRST% %UP_PAGE% %LINK_PAGE% %DOWN_PAGE% %END%");
+
+		$show = $Page->show();// 分页显示输出
+		$this->assign('page',$show);// 赋值分页输出
+
+
+			//p($data);die;
+
+		$this->display();
+	}
+
+	/**
+	 * [ReceiveEdit description]
+	 * @ReceiveList  | 电脑领取管理 单个信息编辑
+	 * ================
+	 * @AuthorHTL
+	 * @DateTime  2017-06-07T21:26:56+0800
+	 * ================
+	 */
+	public function ReceiveEdit(){
+
+
+
+		$Form = M('buyinfo');
+		$data = $_GET['bid'];
+		
+		$this->row=$Form->find($data);
+		$this->display();
+
+
+	}
+
+	public function ReceiveUpdate(){
+		p($_GET[$row]);
+
+			$Form = M('buyinfo');
+			$Form->create();
+			if($Form->save()){
+				  $this->success('修改成功', U('Buy/ReceiveList'));
+			}else{
+			
+				  $this->error('修改失败');
+			};
+
+
+	}
 
 }

@@ -3,12 +3,58 @@
 </div> -->
 
 
-	<div class="headerss bg-primary">
+		<nav class="navbar navbar-inverse" role="navigation">
+				 <div class="container">
+				   <!-- 导航头部 -->
+				   <div class="navbar-header">
+				     <!-- 移动设备上的导航切换按钮 -->
+				     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-example">
+				       <span class="sr-only">切换导航</span>
+				       <span class="icon-bar"></span>
+				       <span class="icon-bar"></span>
+				       <span class="icon-bar"></span>
+				     </button>
+				     <!-- 品牌名称或logo -->
+				     <a class="navbar-brand" href=""><i class="icon icon-spin icon-cog"></i>  采购信息管理</a>
+				   </div>
+				   <!-- 导航项目 -->
+				   <div class="collapse navbar-collapse navbar-collapse-example">
+				     <!-- 一般导航项目 -->
+				     <ul class="nav navbar-nav">
+				       <li class="dropdown">
+				       	<a href="{:U('Buy/index')}" class="dropdown-toggle" data-toggle="dropdown">采购管理<b class="caret"></b></a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="{:U('Buy/index')}">采购管理 <i class="icon icon-spin icon-cog"></i></a>
+								<a href="{:U('Buy/ReceiveList')}"  style="color:#fff; background:#EA644A; ">领取管理 <i class="icon icon-check-board"></i></a>
+								<a href="{:U('Buy/index')}">当月统计 <i class="icon icon-bar-chart"></i></a>
+								<a href="{:U('Buy/index')}">汇总分析 <i class="icon icon-check-board"></i></a>
+							</li>
+						</ul>
+				       </li>
+				       <li><a href="{:U('Dept/index')}">部门管理</a></li>
+				       ...
+				       <!-- 导航中的下拉菜单 -->
+				       <li class="dropdown">
+				         <a href="your/nice/url" class="dropdown-toggle" data-toggle="dropdown">管理 <b class="caret"></b></a>
+				         <ul class="dropdown-menu" role="menu">
+				           <li><a href="your/nice/url">任务</a></li>
+				           ...
+				         </ul>
+				       </li>
+				     </ul>
+				   </div><!-- END .navbar-collapse -->
+				 </div>
+		</nav>
+
+	<!-- <div class="headerss bg-primary">
 		<div class="container">
+
+
 			<div class="logo col-md-5">				
 				<h3><i class="icon icon-2x icon-shopping-cart"></i> 采购信息管理</h3>
 			</div>
-			<!-- <div class="logo col-md-7">
+			<div class="logo col-md-7">
 				<ul class="nav nav-primary">
 				  <li class="active"><a href="{:U('Buy/index')}">采购首页</a></li>
 				  <li><a href="{:U('Dept/index')}">部门管理 </a></li>
@@ -24,8 +70,9 @@
 				  </li>
 				</ul>
 				
-			</div> -->
+			</div>
 
 			
 		</div>	
 		</div>
+ -->

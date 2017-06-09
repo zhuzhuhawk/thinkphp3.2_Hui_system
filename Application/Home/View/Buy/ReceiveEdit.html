@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>领取信息修改</title>
+	<meta charset="UTF-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/Public/dist/css/zui.min.css">
+
+<!-- ZUI Javascript 依赖 jQuery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/zui/1.5.0/lib/jquery/jquery.js"></script>
+<!-- ZUI 标准版压缩后的 JavaScript 文件 -->
+<script src="/Public/dist/js/zui.min.js"></script>
+<link rel="stylesheet" href="/Public/dist/lib/datatable/zui.datatable.css">
+<script src="/Public/dist/lib/datatable/zui.datatable.js"></script>
+<script src="/Public/dist/my97datepicker/wdatepicker.js"></script>
+	<style>
+
+		/*顶部样式表*/
+		.headerss{
+			line-height: 40px;
+			height: 60px;
+			margin-bottom: 10px;
+		}
+
+		/*分页样式*/
+		.current, .num, .next,.prev{
+			font-weight: bold;
+			 border-radius: 4px;
+			 line-height: 20px;
+			 border: 2px solid rgba(15, 25, 78, 0.39);
+			 padding: 5px 20px;
+			 margin: 0px 10px;
+		}
+	</style>
+
+</head>
+<body>
+	<!-- 头部调用 -->
+	<include file="Buy/header" /> 
+	<!-- 顶部导航 -->
+	<div class="container">
+		<ol class="breadcrumb">
+		  <li><a href="{:U('Buy/Index')}">主页</a></li>
+		  <li><a href="{:U('Buy/ReceiveList')}">领取信息修改</a></li>
+		  <li class="">修改信息</li>
+		</ol>
+	</div>
+
+	<!-- 信息修改 -->
+	<div class="container">
+		
+		<form class="form" action="{:U('ReceiveUpdate')}" method="post">
+				<div class="row">
+					<input class="form-control" type="hidden" name="bid" value="{$row['bid']}">
+					<p> <label for="">领取人：</label><input style="    font-size: 16pt; color:#ff0000;   font-weight: bold;"  class="form-control" type="text" name="receiveperson" value="{$row['receiveperson']}"></p>
+					<p> <label for="">领取日期：</label><input  style="    font-size: 16pt;    font-weight: bold;" class="form-control" type="text" name="receivedate" value="{$row['receivedate']}"  onfocus="WdatePicker({isShowWeek:true})"></p>
+					<p><label for="">使用存放地点：</label><input style="    font-size: 16pt;    font-weight: bold;"  class="form-control" type="text" name="receiveuselocation" value="{$row['receiveuselocation']}"> </p>
+					<p> <label for="">备注信息：</label>
+					<!-- <input class="form-control" type="text" name="receiveinfo" value="{$row['receiveinfo']}"> -->
+					<textarea  style="    font-size: 16pt;    font-weight: bold;"  class="form-control" name="receiveinfo" id="" cols="30" rows="5">{$row['receiveinfo']}</textarea>
+					</p>
+					<p class="with-padding" style="background: #E5E5E5;">
+					<label for="">是否确认领走：</label>
+						    <!-- <input type="text" name="receive_yes"  value="{$row[receive_yes]}">   -->
+						    
+						    <label class="radio-inline">
+						   	 <input type="radio" name="receive_yes" value ="1" <if condition="$row[receive_yes] eq '1'">checked  <else /></if>> <span class="label label-primary">点击领走吧！</span>
+						    </label>
+						    <label class="radio-inline">
+						    	<input type="radio" name="receive_yes" value ="0" <if condition="$row[receive_yes] eq '0'">checked <else /></if>><span class="label label-danger">没登记</span>
+						    </label>
+						     <label class="radio-inline">
+						    	<input type="radio" name="receive_yes" value ="2" <if condition="$row[receive_yes] eq '0'">checked <else /></if>><span class="label label-info">已经登记，未领走</span>
+						    </label>
+					 </p>
+					<p> </p>
+
+
+					<p colspan="10" style="text-align: center;">
+						<button class="btn btn-primary">提交信息</button>
+						<button class="btn btn-danger" type="reset">重置信息</button>
+						<a href="{:U('Buy/ReceiveList')}" class="btn btn-info"><i class="icon icon-home"></i> 返回列表</a>
+					</p>
+				</div>
+
+
+
+
+
+
+			
+		</form>
+	</div>
+
+</body>
+</html>
+

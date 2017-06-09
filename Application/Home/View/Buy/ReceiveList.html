@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>领取列表管理</title>
+	<link rel="stylesheet" href="/Public/dist/css/zui.min.css">
+
+	<!-- ZUI Javascript 依赖 jQuery -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/zui/1.5.0/lib/jquery/jquery.js"></script>
+	<!-- ZUI 标准版压缩后的 JavaScript 文件 -->
+	<script src="/Public/dist/js/zui.min.js"></script>
+	<script type="text/javascript" src="/Public/lib/layer/2.4/layer.js"></script>
+
+	<link rel="stylesheet" href="/Public/dist/lib/datatable/zui.datatable.css">
+	<script src="/Public/dist/lib/datatable/zui.datatable.js"></script>
+
+
+
+	<script src="/Public/dist/my97datepicker/wdatepicker.js"></script>
+	<style>
+
+		/*顶部样式表*/
+		.headerss{
+			line-height: 40px;
+			height: 60px;
+			margin-bottom: 10px;
+		}
+
+		/*分页样式*/
+		.current, .num, .next,.prev{
+			font-weight: bold;
+			border-radius: 4px;
+			line-height: 20px;
+			border: 2px solid rgba(15, 25, 78, 0.39);
+			padding: 5px 20px;
+			margin: 0px 10px;
+		}
+	</style>
+
+</head>
+<body>
+	<!-- 头部调用 -->
+	<include file="Buy/header" /> 
+	<!-- 顶部导航 -->
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="{:U('Buy/Index')}">主页</a></li>
+			<li><a href="{:U('Buy/ReceiveList')}">领取信息列表</a></li>
+			<li class="">列表</li>
+		</ol>
+	</div>
+
+	
+	<!-- 信息添加 -->
+	<div class="container">
+		
+	</div>
+
+	<!-- 信息整表查看 -->
+	<div class="container">
+		<table class="table table-datatable table-hover table-bordered table-striped col-md-12 mytable">
+			<tr>
+				<th width="160" style="text-align: center;">编号</th>
+				<th>品名</th>
+				<th>申请人</th>
+				<th >是否领取</th>
+				<th>领取人</th>
+				<th>领取时间</th>
+				<th>物品使用位置</th>
+				<th>备注信息</th>
+				<th><b>管理</b></th>
+			</tr>
+			<volist name="data" id="vo">
+				<tr>
+					<td>{$vo.buyid}</td>
+					<td>{$vo.bname}</td>
+					<td>{$vo.buser}</td>
+					<td>
+						<!-- 根据数据库的值，输出不同的登记信息 -->
+						<if condition="$vo[receive_yes] eq 0" > <span class="label">未登记</span>
+							<elseif condition="$vo[receive_yes] eq 1"/><span class='label label-success'>已经领取</span>
+							<elseif condition="$vo[receive_yes] eq 2"/><span class='label label-info '>已购，未领走</span>
+							<else /> <span class='label label-danger'>数据异常！</span>
+						</if>
+					</td>
+					<td>{$vo[receiveperson]}</td>
+					<td>{$vo[receivedate]}</td>
+					<td>{$vo[receiveuselocation]}</td>
+					<td ><!-- {$vo[receiveinfo]|substr=0,30}... -->
+					<p>
+					  <!-- <button type="button" class="btn" data-toggle="collapse" data-target="#receiveinfo">{$vo[receiveinfo]|substr=0,30}</button> -->
+					  <a href="#receiveinfo_{$vo[bid]}" data-toggle="collapse">{$vo[receiveinfo]|substr=0,30}...</a>
+					</p>
+					<div class="collapse" id="receiveinfo_{$vo[bid]}">
+					
+					 <p style="border: 1px solid #fefefe;width: 130px;z-index: 999; overflow: hidden;"> {$vo[receiveinfo]}</p>  
+					 
+					</div>
+
+
+					</td>
+					<td align="center">
+						<a href="{:U('Buy/ReceiveEdit/',array('bid'=>$vo['bid']))}"><i class="icon icon-edit text-primary" ></i></a>
+					</td>
+				</tr>	
+			</volist>
+			<script type="text/javascript">
+				function myedit(str){
+							// alert(str);
+							// var url = '{:U("Buy/edit/")}?bid='+str;
+							// alert(url);
+							layer.open({
+								type: 2,
+								title: '修改',
+								maxmin: true,
+						      		shadeClose: true, //点击遮罩关闭层
+						      		area : ['800px' , '520px'],
+						      		content: '{:U("Buy/edit/")}?bid='+str,
+						      		end: function () {
+						      			location.reload();
+						      		}
+						      	});
+						}
+
+					</script>
+
+					<tr>
+						<td colspan="11" >
+							<!-- <div class="col-md-3"><button  class="btn btn-primary">一共有{$count}条数据</button></div> -->
+
+							<div class="col-md-9">{$page}</div></td>
+						</tr>
+
+					</table>
+
+					<script>
+						$('table.datatable').datatable({sortable: true});
+					</script>
+
+				</div>
+			</body>
+
+			</html>
