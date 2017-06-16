@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="shortcut icon" href="__ROOT__/favicon.ico" type="image/vnd.microsoft.icon"> 
-	<title>管理系统首页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>部门列表管理</title>
 	<link rel="stylesheet" href="__ROOT__/Public/dist/css/zui.min.css">
 	<!-- ZUI Javascript 依赖 jQuery -->
 	<script src="__ROOT__/Public/lib/jquery/1.9.1/jquery.js"></script>
@@ -13,26 +13,26 @@
 	<script type="text/javascript" src="__ROOT__/Public/lib/layer/2.4/layer.js"></script>
 	<link rel="stylesheet" href="__ROOT__/Public/dist/lib/datatable/zui.datatable.css">
 	<script src="__ROOT__/Public/dist/lib/datatable/zui.datatable.js"></script>
-	<script src="__ROOT__/Public/dist/my97datepicker/wdatepicker.js"></script>	
+	<script src="__ROOT__/Public/dist/my97datepicker/wdatepicker.js"></script>
 </head>
 <body>
-<!-- 头部调用 -->
-	<include file="Index/header" /> 
+
+	<!-- 头部调用 -->
+	<include file="Buy/header" /> 
+	<!-- 顶部导航 -->
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="{:U('Dept/index')}">主页</a></li>
+			<li><a href="{:U('Dept/index')}">部门列表</a></li>
+			<li class="">列表</li>
+		</ol>
+	</div>
+	
+
 	
 	<div class="container">
+		
 
-		<p class="col-md-12">
-			系统主页
-		</p>
-		<p class="col-md-4">
-			<a href="{:U('Index/index')}">主页</a>
-		</p>
-		<p class="col-md-4">
-			<a href="{:U('Index/index')}">主页</a>
-		</p>
-		<p class="col-md-4">
-			<a href="{:U('Index/index')}">主页</a>
-		</p>
 	</div>
 </body>
 </html>

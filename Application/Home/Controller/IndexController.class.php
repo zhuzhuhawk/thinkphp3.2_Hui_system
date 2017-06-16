@@ -1,4 +1,17 @@
 <?php
+
+// 
+//  设计数据库的时候，一定更要注意啊！
+//  不要用任何驼峰法！！！妈的，会出问题啊！
+//  最好用纯小写啊！
+//  ===============================
+//  
+//  规则： 纯小写字母+下划线+（纯小写字母/数字）
+//  例如： ken_buyinfo_main_201706
+//  
+//  ===============================
+// 
+// 
 namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
@@ -6,23 +19,7 @@ class IndexController extends Controller {
     	 // 这是主页
             $this->display(); 
     }
-   public function showdeptlist(){
 
-	
-    	//print_r($model);
-
-    	$Dept = M("Dept");
-    	$this->data = $Dept->select(); 
-    	
-    	//$this ->d_name ='asdf';
-    	$this->display();
-    	echo PATH;
-    	echo "<br>";
-    	ECHO __APP__."PUBLIC";
-    	ECHO COMMON_PATH;
-    	p($this);
-    }
-  
 
 
 }
