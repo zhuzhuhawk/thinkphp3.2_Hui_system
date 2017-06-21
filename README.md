@@ -38,12 +38,3 @@ thinkphp3.2做的一个小小的行政管理系统，主要面向采购管理，
 [蓝香川博客](http://www.lanxiangchuan.com "我的博客") -
 [Mail 联系我](mailto:zhuzhuhawk@qq,com "点击这里给我发邮件")
 
-
-```javascript
-
-function aa(){
-	alert('123');
-}	
-
-
-```
