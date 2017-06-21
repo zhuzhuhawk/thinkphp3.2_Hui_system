@@ -1,78 +1,73 @@
-<!-- <div class="header">
-	<h1>这里是调用的头部信息</h1>
-</div> -->
+<!-- 此页面为全局调用  顶部文件 -->
 
 
-		<nav class="navbar navbar-inverse" role="navigation">
-				 <div class="container">
-				   <!-- 导航头部 -->
-				   <div class="navbar-header">
-				     <!-- 移动设备上的导航切换按钮 -->
-				     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-example">
-				       <span class="sr-only">切换导航</span>
-				       <span class="icon-bar"></span>
-				       <span class="icon-bar"></span>
-				       <span class="icon-bar"></span>
-				     </button>
-				     <!-- 品牌名称或logo -->
-				     <a class="navbar-brand" href="{:U('Index/index')}"><i class="icon icon-spin icon-cog"></i>  系统管理主页</a>
-				   </div>
-				   <!-- 导航项目 -->
-				   <div class="collapse navbar-collapse navbar-collapse-example">
-				     <!-- 一般导航项目 -->
-				     <ul class="nav navbar-nav">
-				       <li class="dropdown">
-				       	<a href="{:U('Buy/index')}" class="dropdown-toggle" data-toggle="dropdown">采购管理<b class="caret"></b></a>
-						<ul class="dropdown-menu" role="menu">
-							<li>
-								<a href="{:U('Buy/index')}">采购管理 <i class="icon icon-spin icon-cog"></i></a>
-								<a href="{:U('Buy/ReceiveList')}"  style="color:#fff; background:#EA644A; ">领取管理 <i class="icon icon-check-board"></i></a>
-								<a href="{:U('Buy/index')}">当月统计 <i class="icon icon-bar-chart"></i></a>
-								<a href="{:U('Buy/index')}">汇总分析 <i class="icon icon-check-board"></i></a>
-							</li>
-						</ul>
-				       </li>
-				       <li><a href="{:U('Dept/index')}">部门管理</a></li>
-				       ...
-				       <!-- 导航中的下拉菜单 -->
-				       <li class="dropdown">
-				         <a href="your/nice/url" class="dropdown-toggle" data-toggle="dropdown">管理 <b class="caret"></b></a>
-				         <ul class="dropdown-menu" role="menu">
-				           <li><a href="your/nice/url">任务</a></li>
-				           ...
-				         </ul>
-				       </li>
-				     </ul>
-				   </div><!-- END .navbar-collapse -->
-				 </div>
-		</nav>
-
-	<!-- <div class="headerss bg-primary">
-		<div class="container">
-
-
-			<div class="logo col-md-5">				
-				<h3><i class="icon icon-2x icon-shopping-cart"></i> 采购信息管理</h3>
-			</div>
-			<div class="logo col-md-7">
-				<ul class="nav nav-primary">
-				  <li class="active"><a href="{:U('Buy/index')}">采购首页</a></li>
-				  <li><a href="{:U('Dept/index')}">部门管理 </a></li>
-				  <li><a href="{:U('Buy/index')}">项目 </a></li>
-				  <li>
-				    <a class="dropdown-toggle" data-toggle="dropdown" href="your/nice/url">更多 <span class="caret"></span></a>
-				    <ul class="dropdown-menu">
-				      <li><a href="your/nice/url">任务</a></li>
-				      <li><a href="your/nice/url">bug</a></li>
-				      <li><a href="your/nice/url">需求</a></li>
-				      <li><a href="your/nice/url">用例</a></li>
-				    </ul>
-				  </li>
-				</ul>
-				
-			</div>
-
-			
-		</div>	
+<nav class="navbar navbar-inverse" role="navigation">
+	<div class="container">
+		<!-- 导航头部 -->
+		<div class="navbar-header">
+			<!-- 移动设备上的导航切换按钮 -->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-example">
+				<span class="sr-only">切换导航</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<!-- 品牌名称或logo -->
+			<a class="navbar-brand" href="{:U('Index/index')}"><i class="icon icon-spin icon-cog"></i>  系统管理主页</a>
 		</div>
- -->
+		<!-- 导航项目 -->
+		<div class="collapse navbar-collapse navbar-collapse-example">
+			<!-- 一般导航项目 -->
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="{:U('Buy/index')}" class="dropdown-toggle" data-toggle="dropdown">采购管理<b class="caret"></b></a>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="{:U('Buy/index')}">采购管理 <i class="icon icon-spin icon-cog"></i></a>
+							<a href="{:U('Buy/ReceiveList')}"  style="color:#fff; background:#EA644A; ">领取管理 <i class="icon icon-check-board"></i></a>
+							<a href="{:U('Buy/index')}">当月统计 <i class="icon icon-bar-chart"></i></a>
+							<a href="{:U('Buy/index')}">汇总分析 <i class="icon icon-check-board"></i></a>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="{:U('Dept/Index')}" class="dropdown-toggle" data-toggle="dropdown">部门管理<b class="caret"></b></a>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="{:U('Dept/Index')}">部门列表 &nbsp;<i class="icon icon-bar-chart"></i></a>
+							<a href="{:U('Dept/Index')}">部门经理 &nbsp;<i class="icon icon-bar-chart"></i></a>
+							<a href="{:U('Dept/Index')}">项目管理 &nbsp;<i class="icon icon-bar-chart"></i></a>
+							<a href="{:U('Dept/Index')}">报表 &nbsp;<i class="icon icon-bar-chart"></i></a>
+						</li>
+					</ul>
+				</li>
+
+				<li class="dropdown">
+					<a href="{:U('Staff/Index')}" class="dropdown-toggle" data-toggle="dropdown">员工管理<b class="caret"></b></a>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="{:U('Staff/Index')}">员工列表 &nbsp;<i class="icon icon-bar-chart"></i></a>
+							<a href="{:U('Staff/Index')}">员工电话 &nbsp;<i class="icon icon-bar-chart"></i></a>
+							<a href="{:U('Staff/Index')}">离职管理 &nbsp;<i class="icon icon-bar-chart"></i></a>
+							<a href="{:U('Staff/Index')}">报表查看 &nbsp;<i class="icon icon-bar-chart"></i></a>
+						</li>
+					</ul>
+				</li>
+
+				<!-- <li><a href="{:U('Dept/index')}">部门管理</a></li>
+				
+				<li><a href="{:U('Staff/index')}">员工管理</a></li> -->
+
+				<!-- 导航中的下拉菜单 -->
+				<li class="dropdown">
+					<a href="your/nice/url" class="dropdown-toggle" data-toggle="dropdown">管理 <b class="caret"></b></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="your/nice/url">任务</a></li>
+						...
+					</ul>
+				</li>
+			</ul>
+		</div><!-- END .navbar-collapse -->
+	</div>
+</nav>
+

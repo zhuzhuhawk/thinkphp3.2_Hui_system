@@ -38,7 +38,7 @@
 </head>
 <body>
 	<!-- 头部调用 -->
-	<include file="Buy/header" /> 
+	<include file="Index/header" /> 
 	<!-- 顶部导航 -->
 	<div class="container">
 		<ol class="breadcrumb">
@@ -65,15 +65,15 @@
 					<label for="">是否确认领走：</label>
 						    <!-- <input type="text" name="receive_yes"  value="{$row[receive_yes]}">   -->
 						    
-						    <label class="radio-inline">
-						   	 <input type="radio" name="receive_yes" value ="1" <if condition="$row[receive_yes] eq '1'">checked  <else /></if>> <span class="label label-primary">点击领走吧！</span>
-						    </label>
-						    <label class="radio-inline">
-						    	<input type="radio" name="receive_yes" value ="0" <if condition="$row[receive_yes] eq '0'">checked <else /></if>><span class="label label-danger">没登记</span>
-						    </label>
-						     <label class="radio-inline">
-						    	<input type="radio" name="receive_yes" value ="2" <if condition="$row[receive_yes] eq '0'">checked <else /></if>><span class="label label-info">已经登记，未领走</span>
-						    </label>
+					   <label class="radio-inline">
+					  	 <input type="radio" name="receive_yes" value ="1" <if condition="$row[receive_yes] eq '1'">checked  <else /></if>> <span class="label label-primary">点击领走吧！</span>
+					   </label>
+					   <label class="radio-inline">
+					   	<input type="radio" name="receive_yes" value ="0" <if condition="$row[receive_yes] eq '0'">checked <else /></if>><span class="label label-danger">没登记</span>
+					   </label>
+					    <label class="radio-inline">
+					   	<input type="radio" name="receive_yes" value ="2" <if condition="$row[receive_yes] eq '2'">checked <else /></if>><span class="label label-info">已经登记，未领走</span>
+					   </label>
 					 </p>
 					<p> </p>
 

@@ -23,23 +23,23 @@
 			height: 60px;
 			margin-bottom: 10px;
 		}
-	
+
 		/*分页样式*/
 		.current, .num, .next,.prev{
 			font-weight: bold;
-			 border-radius: 4px;
-			 line-height: 20px;
-			 border: 2px solid rgba(15, 25, 78, 0.39);
-			 padding: 5px 20px;
-			 margin: 0px 10px;
+			border-radius: 4px;
+			line-height: 20px;
+			border: 2px solid rgba(15, 25, 78, 0.39);
+			padding: 5px 20px;
+			margin: 0px 10px;
 		}
 	</style>
 
 </head>
 <body>
 
-<!-- 头部调用 -->
-<include file="Buy/header" /> 
+	<!-- 头部调用 -->
+	<include file="Index/header" /> 
 
 	
 	<!-- 信息添加 -->
@@ -49,43 +49,43 @@
 				<tr><input class="form-control" type="hidden" name="bid" readonly="">
 					<!-- <td><label for="">编号：</label></td> -->
 					<td colspan="2" ><label for="">id：</label><input class="form-control" type="text" name="buyid"  value="{$buyids}">
-					<td colspan="2" ><label for="">品名：</label><input class="form-control" type="text" name="bname"></td>
+						<td colspan="2" ><label for="">品名：</label><input class="form-control" type="text" name="bname"></td>
 					</td>
 					<td class="col-sm-3" colspan="2" rowspan="2" style="line-height: 50px;">
 						
-							<label for="">数量：</label>
-							<div class="col-md-12">
-								<div class="input-group">
-   								  <span class="input-group-addon">一共：</span>
-   								  <input type="text" class="form-control"  name="bnum" placeholder="填写数字">
-   								  <span class="input-group-addon">个</span>
-   								</div>
-   							</div> 
+						<label for="">数量：</label>
+						<div class="col-md-12">
+							<div class="input-group">
+								<span class="input-group-addon">一共：</span>
+								<input type="text" class="form-control"  name="bnum" placeholder="填写数字">
+								<span class="input-group-addon">个</span>
+							</div>
+						</div> 
 						
 					</td>
 					<!-- <td></td> -->
 				</tr>
 				<tr>
 					<td><p class="col-md-12">
-							<div class="col-md-1"><label for="">价格</label></div>
-							<div class="col-md-7"><input class="form-control" type="text" name="bprice" size="5"></div>
-							<div class="col-md-4">
-								<select class="form-control"  name="bunit" id="">
-									<option value="元">元</option>
-									<option value="美元">美元</option>
-								</select>
-							</div>
+						<div class="col-md-1"><label for="">价格</label></div>
+						<div class="col-md-7"><input class="form-control" type="text" name="bprice" size="5"></div>
+						<div class="col-md-4">
+							<select class="form-control"  name="bunit" id="">
+								<option value="元">元</option>
+								<option value="美元">美元</option>
+							</select>
+						</div>
 
-						</p>
-					</td>
-					<td><label for="">来源：</label>
-						<select class="form-control"  name="bcome" id="">
-							<option value="京东">京东网</option>
-							<option value="实体店">实体店</option>
-							<option value="淘宝">淘宝网</option>
-							<option value="一号店">一号店</option>
-						</select>
-					</td>
+					</p>
+				</td>
+				<td><label for="">来源：</label>
+					<select class="form-control"  name="bcome" id="">
+						<option value="京东">京东网</option>
+						<option value="实体店">实体店</option>
+						<option value="淘宝">淘宝网</option>
+						<option value="一号店">一号店</option>
+					</select>
+				</td>
 					<!-- <td>label</td>
 					<td>label</td> -->
 				</tr>
@@ -107,8 +107,8 @@
 							<input class="form-control" type="text" name="bdate" size="12" >
 						</div> -->
 						<div class="form-date">
- 						   <input style="    font-size: 16pt;    font-weight: bold;" class="form-control" size="16" type="text" value=""  name="bdate" onfocus="WdatePicker({isShowWeek:true})">
- 						</div>
+							<input style="    font-size: 16pt;    font-weight: bold;" class="form-control" size="16" type="text" value=""  name="bdate" onfocus="WdatePicker({isShowWeek:true})">
+						</div>
 						
 					</td>
 					<td></td>
@@ -160,21 +160,21 @@
 					</td>
 				</tr>	
 			</volist>
-						<script type="text/javascript">
-						function myedit(str){
+			<script type="text/javascript">
+				function myedit(str){
 							// alert(str);
 							// var url = '{:U("Buy/edit/")}?bid='+str;
 							// alert(url);
-						   layer.open({
-						        type: 2,
-						        title: '修改',
-						        maxmin: true,
+							layer.open({
+								type: 2,
+								title: '修改',
+								maxmin: true,
 						        shadeClose: true, //点击遮罩关闭层
 						        area : ['800px' , '520px'],
 						        content: '{:U("Buy/edit/")}?bid='+str,
 						        end: function () {
-						                location.reload();
-						            }
+						        	location.reload();
+						        }
 						    });
 						}
 
@@ -193,22 +193,23 @@
 						            // }
 						    // });
 						// });
-						</script>
+					</script>
 
-				<tr>
+				<!-- <tr>
 					<td colspan="11" >
-					<!-- <div class="col-md-3"><button  class="btn btn-primary">一共有{$count}条数据</button></div> -->
+					<div class="col-md-3"><button  class="btn btn-primary">一共有{$count}条数据</button></div>
 					
-					<div class="col-md-9">{$page}</div></td>
-				</tr>
-			
+					<div class="col-md-9"></div></td>
+				</tr> -->
+
 		</table>
 
-		<script>
-			$('.mytable').datatable({sortable: true});
-		</script>
+		<div class="center-block">{$page}</div>
+			<script>
+				$('.mytable').datatable({sortable: true});
+			</script>
 
-	</div>
-</body>
+		</div>
+	</body>
 
-</html>
+	</html>
