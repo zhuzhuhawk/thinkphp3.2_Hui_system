@@ -41,9 +41,9 @@ thinkphp3.2做的一个小小的行政管理系统，主要面向采购管理，
 
 ```javascript
 
-	function aa(){
-		alert('123');
-	}	
+function aa(){
+	alert('123');
+}	
 
 
 ```
